@@ -1,4 +1,5 @@
 ![image alt](https://github.com/sanjayk444/Library-management-system/blob/ae314e5f2b3ea545ea8d6f2e5b90ced4194266f3/Screenshot%202026-05-31%20205613.png) 
+![image alt](https://github.com/sanjayk444/Library-management-system/blob/7a7acf4957d947fd36830870aaa7ec3c4e00bcd9/Screenshot%202026-05-31%20205704.png)
 
 A full-stack Library Management System built with **React.js**, **Tailwind CSS**, **ASP.NET Core Web API**, **Entity Framework Core**, and **SQL Server**. Designed as a portfolio-ready project demonstrating clean architecture, JWT authentication, and RESTful API design.
 
