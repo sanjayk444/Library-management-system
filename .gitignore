@@ -1,0 +1,18 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+## Node
+client/node_modules/
+client/dist/
+
+## Environment
+.env.local
+*.db
+
+## IDE
+.idea/
+*.swp
