@@ -1,4 +1,4 @@
-# Library Management System (LMS)
+https://github.com/sanjayk444/Library-management-system/blob/ae314e5f2b3ea545ea8d6f2e5b90ced4194266f3/Screenshot%202026-05-31%20205613.png# Library Management System (LMS)
 
 A full-stack Library Management System built with **React.js**, **Tailwind CSS**, **ASP.NET Core Web API**, **Entity Framework Core**, and **SQL Server**. Designed as a portfolio-ready project demonstrating clean architecture, JWT authentication, and RESTful API design.
 
