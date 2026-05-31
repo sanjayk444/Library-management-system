@@ -1,16 +1,88 @@
-# React + Vite
+# Library Management System (LMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Library Management System built with **React.js**, **Tailwind CSS**, **ASP.NET Core Web API**, **Entity Framework Core**, and **SQL Server**. Designed as a portfolio-ready project demonstrating clean architecture, JWT authentication, and RESTful API design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Frontend (React + Tailwind CSS)
+- Responsive dashboard with statistics
+- Login & Registration with JWT
+- Book, Member, and Transaction management
+- Search, filter, pagination, and sorting
+- Protected routes
+- Modern UI with Tailwind CSS v4
 
-## React Compiler
+### Backend (ASP.NET Core Web API)
+- JWT Authentication & Role-based Authorization (Admin, Librarian)
+- RESTful APIs with Swagger documentation
+- Repository Pattern + Unit of Work
+- DTO Pattern + Dependency Injection
+- Global Exception Handling Middleware
+- CRUD for Books & Members
+- Issue/Return Book APIs with fine calculation
+- Dashboard statistics API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Database (SQL Server)
+- Code First with EF Core Migrations
+- Seed data (users, books, members)
+- Audit fields (CreatedDate, UpdatedDate)
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+LMS/
+├── src/
+│   ├── LibraryManagement.Domain/       # Entities, Enums
+│   ├── LibraryManagement.Application/  # DTOs, Interfaces, Services
+│   ├── LibraryManagement.Infrastructure/ # DbContext, Repositories, Migrations
+│   └── LibraryManagement.API/          # Controllers, Middleware, Program.cs
+├── client/                             # React + Vite + Tailwind
+└── LibraryManagement.slnx
+```
+
+## Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download) (or .NET 8+)
+- [SQL Server](https://www.microsoft.com/sql-server) or **LocalDB** (included with Visual Studio)
+- [Node.js 18+](https://nodejs.org/)
+
+## Getting Started
+
+### 1. Database & API
+
+Update the connection string in `src/LibraryManagement.API/appsettings.json` if needed:
+
+```json
+"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=LibraryManagementDb;Trusted_Connection=True;TrustServerCertificate=True;"
+```
+
+Run the API (migrations and seed run automatically on startup):
+
+```bash
+cd src/LibraryManagement.API
+dotnet run
+```
+
+- API: https://localhost:7102
+- Swagger: https://localhost:7102/swagger
+
+### 2. Frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+- App: http://localhost:5173
+
+
+## Tech Stack
+
+| Layer    | Technology                          |
+|----------|-------------------------------------|
+| Frontend | React 19, Vite, Tailwind CSS 4      |
+| Backend  | ASP.NET Core 10, EF Core 10         |
+| Database | SQL Server                          |
+| Auth     | JWT Bearer                          |
+
